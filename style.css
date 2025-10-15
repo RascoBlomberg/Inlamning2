@@ -3,15 +3,18 @@
     src: url("assets\KFPk-9IF4FqAqY-.woff2");
 }
 
-.body {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top: 50px;
     font-family: "arial";
     color: white;
+    background-color: #E4E6E6;
 }
-.header {
+.main-content{
+    padding-top: 100px;
+}
+header {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -21,12 +24,13 @@
     top: 0;
     left: 0;
     background-color: #0F1111;
+    z-index: 10;
 }
-.header .div1{
+header .div1{
     align-content: center;
 }
 
-.header .div1:hover {
+header .div1:hover {
     border: solid white 1px;
 }
 
@@ -111,6 +115,7 @@
     height: 50px;
     background-color: #232F3E;
     font-size: 14px;
+    top: 50px;
 }
 .sub-header .div1{
     display: flex;
@@ -137,20 +142,42 @@
   }
 
 
+/* Produkt boxar */
+
+
+.page {
+  max-width: 1600px;      /* välj samma värde för båda sektionerna */
+  margin: 0 auto;
+  padding: 0 16px;        /* valfri inner-marginal */
+  box-sizing: border-box;
+}
+
+.boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1600px;   /* samma som .container */
+    margin: 40px auto 0; /* luft under slidern och centrerat */
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-300px);  /* justera värdet så det blir "halvt ovanpå" */
+    margin-bottom: -100px;
+}
 .box {
-    position: absolute;
-    width: 376px;
-    height: 420px;
-    background-color: #534896;
-    top: 35.5%;
-    left: 50%;
-    padding: 16px;
-  }
-.box-header{
-    height: 336px;
-    height: 27px;
-    background-color: #febd69;
+    flex: 1 1 360px;    /* låt boxarna krympa/växa lite */
+    max-width: 356px;   /* men inte bli bredare än designen */
+    height: 400px;
+    background: white;
     padding: 10px;
+}
+.box-header{
+    height: 27px;
+    color: black;
+    padding: 0 0 5px;
 }
 .box-header h2{
     margin: 0;
@@ -158,12 +185,11 @@
 .box-content{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    width: 376px;
+    width: 356px;
     height: 303px;
-    background-color: aquamarine;
-    gap: 10px;
+    gap: 20px;
 }
 
 .content-row1,
@@ -174,78 +200,104 @@
     height: auto;
 }
 
-.content-row1{
-    background-color: red;
-}
-.content-row2{
-    background-color: green;
-}
-.content-row3{
-    background-color: yellow;
-}
-.content-row4{
-    background-color: blue;
-}
-
-
 .box-text1 {
     padding: 0;
 }
 .box-text1 h4{
     margin: 0;
-    background-color: black;
-    width: 85px;
+    background-color: #CC0C39;
+    width: 65px;
     padding: 3px 3px;
+    font-size: 12px;
+    margin: 2px;
 }
 .box-text1 p{
     margin: 0;
-    color: red;
+    color: #CC0C39;
     font-size: 12px;
 }
 .content-fotter{
     width: 336px;
     height: 16.91;
     font-size: 13px;
+    color: #2162A1;
+    padding: 10px 0 0;
 }
-.container{
-    width: 1400px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 40.8%;
-    left: 50%;
-    overflow: hidden;
-  }
-.wrapper{
-    width: 100%;
-    display:  flex;
-    animation: slide 16s infinite;
-  }
-@keyframes slide{
-    0%{
-        transform: translateX(0%);
-    }
-    25%{
-        transform: translateX(0%);
-    }
-    30%{
-        transform: translateX(-100%);
-    }
-    50%{
-        transform: translateX(-100%);
-    }
-    55%{
-        transform: translateX(-200%);
-    }
-    75%{
-        transform: translateX(-200%);
-    }
-    80%{
-        transform: translateX(-300%);
-    }
-    100%{
-        transform: translateX(-300%);
-    }
-  }
+
+.second-row {
+    margin-top: 130px; /* luft mellan raderna */
+}
+
+/* bildslide */
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1620px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.container img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Knappar */
+.container button {
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 5;
+}
+
+.prev {
+  left: 20px;
+  position: absolute;
+  top: 30%;
+  background: transparent;
+  font-size: 50px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.next {
+  right: 20px;
+  position: absolute;
+  top: 30%;
+  background: transparent;
+  font-size: 50px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+
 img{
     width: 100%;
   }
+
+.auto-toggle {
+  position: absolute;
+  top: 3%;
+  right: 60px;
+  padding: 1px 6px;
+  font-size: 12px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  cursor: pointer;
+  z-index: 6;                /* över bilder och pilar */
+}
+
+/* (valfritt) pilarna lite lägre på små skärmar */
+@media (max-width: 600px) {
+  .prev, .next { font-size: 24px; padding: 8px 12px; }
+  .auto-toggle { font-size: 11px; padding: 5px 8px; }
+}
