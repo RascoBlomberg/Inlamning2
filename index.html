@@ -1,61 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amazon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class = "div1"> <img src="assets\16-167642_amazon-logo-amazon-logo-white-text.png" class="amazon-icon" alt="Amazon logo">Amazon </div>
-        <div class = "div1">Plats </div>
-        <form class = "Sok-bar">
-            <div class ="kategori">
-                <div class = "kategori-text">
-                    <span>Alla Kategorier</span>
-                    
-                </div>
-                <ul class ="dropdown">
-                                <li>Böcker</li>
-                                <li>Böcker</li>
-                                <li>Böcker</li>
-                    </ul>
-            </div>
-            <input type = "search" placeholder="sök i amazon.se">
-            <button type = "submit"><img src="assets/search_24dp_C9C9C9_FILL0_wght400_GRAD0_opsz24.svg" class="sok-image" alt="bild på ett förstoring glass"></button>
-        </form>
-        <div class = "div1"> SV</div>
-        <div class = "div1"> Loggin</div>
-        <div class = "div1">Retur</div>
-        <div class = "div1">Kundvagn</div>
-    </header>
+  <!-- Logo (always visible) -->
+  <div class="div1">
+    <img src="assets/vecteezy_amazon-logo-png-amazon-icon-transparent-png_19766415.png" 
+         class="amazon-icon" alt="Amazon logo">
+  </div>
+
+  <!-- Hamburger button (only shows on mobile) -->
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+  <!-- Everything else goes inside this wrapper -->
+  <div class="header-menu">
+    <div class="div1 row">
+      <img src="assets/pin_drop_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="map location icon" class="icon">
+      <div class="text-container">
+        <div class="title plats">Leverar till 416 64 Göteborg</div>
+        <div class="subtitle">Uppdatera plats</div>
+      </div>
+    </div>
+
+    <!-- Desktop search (full) -->
+    <div class="search-container desktop-search">
+    <button class="dropdown-btn">Alla kategorier ▼</button>
+    <input type="text" placeholder="Sök här...">
+    <button class="search-btn">Sök</button>
+    </div>
+
+    <!-- Mobile search (icon toggle) -->
+    <div class="search-container mobile-search">
+    <button class="search-toggle" aria-label="Open search">🔍</button>
+    <div class="search-input-wrapper">
+        <input type="text" placeholder="Sök här...">
+        <button class="search-btn">Sök</button>
+    </div>
+    </div>
+
+    <div class="div1 row">
+      <img src="assets/sweden.png" alt="icon of the swedish flag" class="icon">
+      <div class="text-container">
+        <div class="title">EN ▼</div>
+      </div>
+    </div>
+
+    <div class="div1 row">
+      <div class="text-container">
+        <a href="login.html">
+          <div class="title">Hej, logga in</div>
+          <div class="subtitle">Konto & listor ▼</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="div1 row">
+      <div class="text-container">
+        <div class="title">Returer</div>
+        <div class="subtitle">& beställningar</div>
+      </div>
+    </div>
+
+    <div class="div1 row">
+      <img src="assets/add_shopping_cart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="shopping cart ikon" class="icon">
+      <div class="text-container">
+        <div class="title">Kundvagn</div>
+      </div>
+    </div>
+  </div>
+</header>
+
     <header class = "sub-header">
-        <div class = "div1"><img src="assets\menu_button.svg" class="icon-hamburger" alt="en hamburger meny knapp" aria-hidden="true">Alla</div>
-        <div class = "div1">Bästsäljare</div>
-        <div class = "div1">Erbjudanden</div>
-        <div class = "div1">Elektronik</div>
-        <div class = "div1">Hem & kök</div>
-        <div class = "div1">Presentkort</div>
-        <div class = "div1">TV-spel & konsoler</div>
-        <div class = "div1">Böcker</div>
-        <div class = "div1">Leksaker & spel</div>
-        <div class = "div1">Sport & outdoor</div>
-        <div class = "div1">Bygg, el & verktyg</div>
-        <div class = "div1">Hälsa, vård & hushåll</div>
-        <div class = "div1">Prime</div>
-        <div class = "div1">Prime Video</div>
-        <div class = "div1">LEE TOT </div>
+        <div class = "div1"><img src="assets/menu_button.svg" class="icon-hamburger" alt="en hamburger meny knapp" aria-hidden="true">All</div>
+        <div class = "div1">Buy Again</div>
+        <div class = "div1">Customer Service</div>
+        <div class = "div1">Oscar's Amazon</div>
+        <div class = "div1">Browsing History ▼</div>
+        <div class = "div1">Health & Households Products</div>
+        <div class = "div1">Gift Cards</div>
+        <div class = "div1">Home Improvement</div>
+        <div class = "div1">Today's Deals</div>
+        <div class = "div1">Electronics</div>
+        <div class = "div1">Toys & Games</div>
+        <div class = "div1">Prime ▼</div>
+        <div class = "div1">Home & Kitchen</div>
     </header>
     <div class="main-content">
         <div class="page"></div>
             <div class = "container">
                 
                 <div class ="wrapper">
-                    <img src="assets/shoppa.jpg">
-                    <img src="assets/playdirty.jpg">
-                    <img src="assets/leeds.jpg">
-                    <img src="assets/internet.jpg">
+                    <img src="assets/shoppa.jpg" alt ="banner picture ad">
+                    <img src="assets/playdirty.jpg" alt ="banner picture amazon prime ad">
+                    <img src="assets/leeds.jpg" alt ="banner picture of footbool match ad">
+                    <img src="assets/internet.jpg" alt ="banner picture ad">
                 </div>
                 <!-- Slideshow knappar-->
                 <button class="prev">&#10094;</button>
@@ -479,9 +522,173 @@
                 </div>
             </div>
 
+            <!-- HTML -->
+                <section class="mini-slider-wrapper">
+                     <h2 class="section-title">Erbjudanden</h2>
+                <div class="top-left-texts" role="region" aria-label="Erbjudandeinfo">
+                    <div class="tl-text tl-text--primary">Priser som får dig att le</div>
+                    <div class="tl-text tl-text--secondary">Gratis leverans på köp över 229 kr på miljontals produkter</div>
+                </div>
+                <!-- Prev knapp (länka till valfritt id) -->
+                <button class="mini-prev" aria-label="Föregående">‹</button>
+
+                <div class="mini-slider" role="region" aria-label="Produkt-slider">
+                    <div class="mini-track">
+                    <!-- Ge varje slide ett id så du kan hoppa till den utan JS -->
+                    <figure class="mini-slide" id="s1">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 1">
+                        <figcaption>Produkt text här 1</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s2">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 2">
+                        <figcaption>Produkt text här 2</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s3">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 3">
+                        <figcaption>Produkt text här 3</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s4">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 4">
+                        <figcaption>Produkt text här 4</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s5">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 5">
+                        <figcaption>Produkt text här 5</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s6">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 6">
+                        <figcaption>Produkt text här 6</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s7">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 7">
+                        <figcaption>Produkt text här 7</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s8">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 8">
+                        <figcaption>Produkt text här 8</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s9">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 9">
+                        <figcaption>Produkt text här 9</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s10">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 10">
+                        <figcaption>Produkt text här 10</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s11">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 11">
+                        <figcaption>Produkt text här 11</figcaption>
+                    </figure>
+
+                    <figure class="mini-slide" id="s12">
+                        <img src="assets/8._SY232_CB564745905_.jpg" width="200" height="200" alt="Produkt 12">
+                        <figcaption>Produkt text här 12</figcaption>
+                    </figure>
+                    </div>
+                </div>
+
+                <!-- Next knapp (länka till valfritt id) -->
+                <button class="mini-next" aria-label="Nästa">›</button>
+                </section>
+    </div>
+
+    <footer>
+    <div class="top-back">
+        <a href="#">Tillbaka till toppen</a>
+    </div>
+    <!-- Övre sektionen -->
+    <div class="footer-top">
+        <div class="footer-column">
+            <h4>Lär känna oss</h4>
+            <a href="#">Företagsinformation</a>
+            <a href="#">Jobb</a>
+            <a href="#">Pressmeddelanden</a>
+            <a href="#">Amazon Science</a>
+        </div>
+        <div class="footer-column">
+            <h4>Följ oss på</h4>
+            <a href="#">Facebook</a>
+        </div>
+        <div class="footer-column">
+            <h4>Tjäna pengar med Amazon</h4>
+            <a href="#">Skydda och bygg ditt varumärke</a>
+            <a href="#">Sälj på Amazon</a>
+            <a href="#">Bli partner</a>
+            <a href="#">Fulfilment by Amazon</a>
+            <a href="#">Leverans till Amazon</a>
+            <a href="#">Marknadsför dina produkter</a>
+        </div>
+        <div class="footer-column">
+            <h4>Låt oss hjälpa till</h4>
+            <a href="#">Spåra paket eller visa beställningar</a>
+            <a href="#">Fraktpriser och policyer</a>
+            <a href="#">Returer och ersättningsprodukter</a>
+            <a href="#">Återvinning</a>
+            <a href="#">Återkallelser och produktsäkerhetsvarningar</a>
+            <a href="#">Amazon-mobilappen</a>
+            <a href="#">Kundtjänst</a>
+            <a href="#">Tillgänglighet</a>
+            <a href="#">Rapportera olagligt innehåll</a>
         </div>
     </div>
-</body>
+
+    <!-- Mellansektionen -->
+    <div class="footer-middle">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="amazon-icon" alt="Amazon logo">
+        <div class="Svenska-box">
+            Svenska
+        </div>
+        <div class="Sverige-box">
+            Sverige
+        </div>
+    </div>
+
+    <!-- Nedre sektionen -->
+    <div class="footer-bottom">
+        <ul>
+            <li>
+                <a href="#">IMDb</a>
+                <span>Film, TV och kändisar</span>
+            </li>
+            <li>
+                <a href="#">Goodreads</a>
+                <span>Bokrecensioner & rekommendationer</span>
+            </li>
+            <li>
+                <a href="#">Amazon Web Services</a>
+                <span>Skalbara moln, Databehandlingstjänster</span>
+            </li>
+            <li>
+                <a href="#">Amazon Music</a>
+                <span>Streama miljontals låtar</span>
+            </li>
+            <li>
+                <a href="#">Alexa</a>
+                <span>Lätttillgängliga analyser för webben</span>
+            </li>
+            <li>
+                <a href="#">Shopbop</a>
+                <span>Designer & Modemärken</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="footer-copy">
+        Villkor för användning och köp | Integritetsmeddelande | Bolagsinformation | Cookiemeddelande | Meddelande om intressebaserade annonser<br>
+        &copy; 1996-2025, Amazon.com, Inc. eller dess dotterbolag
+    </div>
+</footer>
 
 <script>
   const container = document.querySelector('.container');
@@ -533,11 +740,79 @@
       startAutoplay();
     }
   });
+  
+    document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector(".mini-track"); // ändrat här
+    const slides = document.querySelectorAll(".mini-slide");
+    const prevBtn = document.querySelector(".mini-prev");
+    const nextBtn = document.querySelector(".mini-next");
+
+    let currentIndex = 0;
+
+    if (!wrapper) {
+        console.error("Elementet .mini-track hittades inte!");
+        return;
+    }
+
+    if (slides.length === 0) {
+        console.error("Inga slides hittades!");
+        return;
+    }
+
+    const slideWidth = slides[0].offsetWidth;
+    const sliderElem = document.querySelector(".mini-slider");
+    const visibleSlides = Math.floor(sliderElem.offsetWidth / slideWidth);
+    const maxIndex = slides.length - visibleSlides;
+
+    function updateSlider() {
+        const offset = currentIndex * slideWidth;
+        wrapper.style.transform = `translateX(-${offset}px)`;
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        updateSlider();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = Math.min(currentIndex + 1, maxIndex);
+        updateSlider();
+    });
+
+    updateSlider();
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".header-menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  // Mobile search toggle
+  const searchToggle = document.querySelector(".mobile-search .search-toggle");
+  const searchWrapper = document.querySelector(".mobile-search .search-input-wrapper");
+
+  searchToggle.addEventListener("click", () => {
+    searchWrapper.classList.toggle("active");
+  });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const amazonLogo = document.querySelector(".amazon-icon");
+  const subHeader = document.querySelector(".sub-header");
+
+  amazonLogo.addEventListener("click", () => {
+    subHeader.classList.toggle("show");
+  });
+    });
+
 
   showSlide(0);
   startAutoplay();
 </script>
 
-
+</body>
 
 </html>
